@@ -1,0 +1,8 @@
+query CustomObject($key: String!, $container: String!) {
+  customObject(key: $key, container: $container) {
+    version
+    container
+    key
+    value
+  }
+}
