@@ -11,10 +11,6 @@ const config = {
     development: {
       initialProjectKey: 'harm-sandbox-3',
     },
-    production: {
-      applicationId: 'TODO',
-      url: 'https://your_app_hostname.com',
-    },
   },
   oAuthScopes: {
     view: ['view_products'],
