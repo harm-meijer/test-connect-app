@@ -14,7 +14,6 @@ const config = {
     },
     production: {
       applicationId: '${env:APPLICATION_ID}',
-      cdnUrl: 'https://code.jquery.com/jquery-3.7.1.min.js',
       url: '${env:APPLICATION_URL}',
     },
   },
