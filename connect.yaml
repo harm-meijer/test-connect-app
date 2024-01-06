@@ -1,5 +1,5 @@
 deployAs:
-  # - name: service
+  # - name: `
   #   applicationType: service
   #   endpoint: /service
   #   scripts:
@@ -56,7 +56,7 @@ deployAs:
   #       - key: CTP_SCOPE
   #         description: commercetools Composable Commerce client scope
   - name: mc-app
-    applicationType: mc-app
+    applicationType: merchant-center-custom-application
     endpoint: /
     configuration:
       standardConfiguration:
