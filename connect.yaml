@@ -66,6 +66,3 @@ deployAs:
         - key: CLOUD_IDENTIFIER
           description: The identifier of the cloud Region that the Custom Application uses to connect to Composable Commerce. The values map to the actual Merchant Center API URL for that Region
           required: true
-      securedConfiguration:
-        - key: SOME_SECRET
-          description: Test for secret key, this will be hosted publicly or ignored
