@@ -9,11 +9,7 @@ import JobRoutes from './routes/job.route';
 // Import logger
 import { logger } from './utils/logger.utils';
 
-import { readConfiguration } from './utils/config.utils';
 import { errorMiddleware } from './middleware/error.middleware';
-
-// Read env variables
-readConfiguration();
 
 const PORT = 8080;
 
