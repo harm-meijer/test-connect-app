@@ -4,7 +4,8 @@ deployAs:
     endpoint: /service
     configuration:
       standardConfiguration:
-      securedConfiguration:
+        - key: HELLO
+          description: hello
   - name: job
     applicationType: job
     endpoint: /job
