@@ -19,6 +19,7 @@ const config = {
   },
   additionalEnv: {
     someSecret: '${env:SOME_SECRET}',
+    serviceUrl: '${env:SERVICE_URL}',
   },
   oAuthScopes: {
     view: ['view_products'],

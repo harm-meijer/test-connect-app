@@ -22,8 +22,8 @@ function createForWardFetch(customFetch: Fetch = fetch) {
       },
       {
         forwardToConfig: {
-          //@todo: this can come from the environment
-          uri: `${process.env.SERVICE_URL}/service${path}`,
+          //@ts-ignore
+          uri: `${app.serviceUrl}/service${path}`,
         },
       }
     );
@@ -39,6 +39,7 @@ function mergeHeaders(...headersInit: HeadersInit[]): Headers {
       mergedHeaders.set(key, value);
     });
   }
+  mergedHeaders.set('ngrok-skip-browser-warning', 'true');
 
   return mergedHeaders;
 }

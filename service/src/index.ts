@@ -4,6 +4,8 @@ import {
   createSessionMiddleware,
   CLOUD_IDENTIFIERS,
 } from '@commercetools-backend/express';
+import { config } from 'dotenv';
+config();
 
 const PORT = 8080;
 
@@ -36,7 +38,7 @@ app.use('/service', (req, res) => {
     userPermissions: r.session.userPermissions,
   });
 });
-
+logger.info(`service url ${process.env.SERVICE_URL}`);
 // Listen the application
 const server = app.listen(PORT, () => {
   logger.info(`⚡️ Service application listening on port ${PORT}`);
