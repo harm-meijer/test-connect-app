@@ -23,7 +23,7 @@ function createForWardFetch(customFetch: Fetch = fetch) {
       {
         forwardToConfig: {
           //@todo: this can come from the environment
-          uri: `https://service-ef6aa1fb-998a-4455-9f80-f61e4bdbbe26.europe-west1.gcp.preview.commercetools.app/service${path}`,
+          uri: `${process.env.SERVICE_URL}/service${path}`,
         },
       }
     );

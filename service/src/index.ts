@@ -11,8 +11,7 @@ const PORT = 8080;
 const app: Express = express();
 app.use(
   createSessionMiddleware({
-    audience:
-      'https://service-ef6aa1fb-998a-4455-9f80-f61e4bdbbe26.europe-west1.gcp.preview.commercetools.app',
+    audience: process.env.SERVICE_URL as string,
     issuer: CLOUD_IDENTIFIERS.GCP_EU,
   })
 );
