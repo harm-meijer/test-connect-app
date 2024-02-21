@@ -39,7 +39,6 @@ function mergeHeaders(...headersInit: HeadersInit[]): Headers {
       mergedHeaders.set(key, value);
     });
   }
-  mergedHeaders.set('ngrok-skip-browser-warning', 'true');
 
   return mergedHeaders;
 }
