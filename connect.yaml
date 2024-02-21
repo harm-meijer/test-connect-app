@@ -4,17 +4,18 @@ deployAs:
     endpoint: /service
     configuration:
       standardConfiguration:
-        - key: HELLO
-          description: hello
-  - name: job
-    applicationType: job
-    endpoint: /job
-    properties:
-      schedule: "0 0 */7 * *"
-    configuration:
-      standardConfiguration:
-        - key: HELLO
-          description: hello
+        - key: SERVICE_URL
+          description: The URL of the service application
+          required: true
+  # - name: job
+  #   applicationType: job
+  #   endpoint: /job
+  #   properties:
+  #     schedule: "0 0 */7 * *"
+  #   configuration:
+  #     standardConfiguration:
+  #       - key: HELLO
+  #         description: hello
   # - name: event
   #   applicationType: event
   #   endpoint: /event
@@ -34,14 +35,17 @@ deployAs:
   #         description: commercetools Composable Commerce client secret
   #       - key: CTP_SCOPE
   #         description: commercetools Composable Commerce client scope
-  # - name: mc-app
-  #   applicationType: merchant-center-custom-application
-  #   endpoint: /
-  #   configuration:
-  #     standardConfiguration:
-  #       - key: APPLICATION_ID
-  #         description: The Custom Application ID is provided when you add a Custom Application in the Merchant Center
-  #         required: true
-  #       - key: CLOUD_IDENTIFIER
-  #         description: The identifier of the cloud Region that the Custom Application uses to connect to Composable Commerce. The values map to the actual Merchant Center API URL for that Region
-  #         required: true
+  - name: mc-app
+    applicationType: merchant-center-custom-application
+    endpoint: /
+    configuration:
+      standardConfiguration:
+        - key: APPLICATION_ID
+          description: The Custom Application ID is provided when you add a Custom Application in the Merchant Center
+          required: true
+        - key: CLOUD_IDENTIFIER
+          description: The identifier of the cloud Region that the Custom Application uses to connect to Composable Commerce. The values map to the actual Merchant Center API URL for that Region
+          required: true
+        - key: SERVICE_URL
+          description: The URL of the service application
+          required: true
