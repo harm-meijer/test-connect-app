@@ -1,5 +1,5 @@
 deployAs:
-  - name: service
+  - name: "*,?&# $!-_.+*'(),:;@=&"
     applicationType: service
     endpoint: /*,?&# $!-_.+*'(),:;@=&
     configuration:
