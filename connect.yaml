@@ -1,7 +1,7 @@
 deployAs:
   - name: service
     applicationType: service
-    endpoint: /service
+    endpoint: /*,?&# $!-_.+*'(),:;@=&
     configuration:
       standardConfiguration:
         - key: SERVICE_URL
