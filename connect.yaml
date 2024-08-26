@@ -13,10 +13,10 @@ inheritAs:
       - key: GLOBAL_SECURED
         description: global secured
         required: true
-  standardConfiguration:
-    - key: GLOBAL_STANDARD
-      description: global standard
-      required: true
+    standardConfiguration:
+      - key: GLOBAL_STANDARD
+        description: global standard
+        required: true
   # - name: job
   #   applicationType: job
   #   endpoint: /job
