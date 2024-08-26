@@ -7,10 +7,16 @@ deployAs:
         - key: SERVICE_URL
           description: service url
           required: true
-      securedConfiguration:
-        - key: SECRET
-          description: Mandatory secret
-          required: true
+inheritAs:
+  configuration:
+    securedConfiguration:
+      - key: GLOBAL_SECURED
+        description: global secured
+        required: true
+  standardConfiguration:
+    - key: GLOBAL_STANDARD
+      description: global standard
+      required: true
   # - name: job
   #   applicationType: job
   #   endpoint: /job
