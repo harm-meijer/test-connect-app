@@ -37,7 +37,7 @@ deployAs:
   #         description: commercetools Composable Commerce client scope
   - name: mc-view
     applicationType: merchant-center-custom-application
-    endpoint: /
+    # endpoint: /
     configuration:
       standardConfiguration:
         - key: CUSTOM_APPLICATION_ID
