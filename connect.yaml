@@ -1,22 +1,12 @@
 deployAs:
-  - name: service
-    applicationType: service
-    endpoint: /service
-    configuration:
-      standardConfiguration:
-        - key: SERVICE_URL
-          description: service url
-          required: true
-inheritAs:
-  configuration:
-    securedConfiguration:
-      - key: GLOBAL_SECURED
-        description: global secured
-        required: true
-    standardConfiguration:
-      - key: GLOBAL_STANDARD
-        description: global standard
-        required: true
+  # - name: service
+  #   applicationType: service
+  #   endpoint: /service
+  #   configuration:
+  #     standardConfiguration:
+  #       - key: SERVICE_URL
+  #         description: service url
+  #         required: true
   # - name: job
   #   applicationType: job
   #   endpoint: /job
@@ -45,17 +35,27 @@ inheritAs:
   #         description: commercetools Composable Commerce client secret
   #       - key: CTP_SCOPE
   #         description: commercetools Composable Commerce client scope
-  # - name: mc-app
-  #   applicationType: merchant-center-custom-application
-  #   endpoint: /
-  #   configuration:
-  #     standardConfiguration:
-  #       - key: APPLICATION_ID
-  #         description: The Custom Application ID is provided when you add a Custom Application in the Merchant Center
-  #         required: true
-  #       - key: CLOUD_IDENTIFIER
-  #         description: The identifier of the cloud Region that the Custom Application uses to connect to Composable Commerce. The values map to the actual Merchant Center API URL for that Region
-  #         required: true
-  #       - key: SERVICE_URL
-  #         description: The URL of the service application
-  #         required: true
+  - name: mc-view
+    applicationType: merchant-center-custom-application
+    endpoint: /
+    configuration:
+      standardConfiguration:
+        - key: CUSTOM_APPLICATION_ID
+          description: The Custom Application ID is provided when you add a Custom Application in the Merchant Center
+          required: true
+        - key: CLOUD_IDENTIFIER
+          description: The identifier of the cloud Region that the Custom Application uses to connect to Composable Commerce. The values map to the actual Merchant Center API URL for that Region
+          required: true
+        - key: ENTRY_POINT_URI_PATH
+          description: The URL of the service application
+          required: true
+# inheritAs:
+#   configuration:
+#     securedConfiguration:
+#       - key: GLOBAL_SECURED
+#         description: global secured
+#         required: true
+#     standardConfiguration:
+#       - key: GLOBAL_STANDARD
+#         description: global standard
+#         required: true
